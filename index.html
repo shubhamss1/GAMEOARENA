@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090714">
+  <title>GAMEOARENA — Play • Upload • Earn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#"><span class="brand-icon">🎮</span><span>GAMEO<span>ARENA</span></span></a>
+      <nav>
+        <button class="nav-link active" data-view="home">⌂ <span>Home</span></button>
+        <button class="nav-link" data-view="browse">🎮 <span>Browse Games</span></button>
+        <button class="nav-link" data-view="browse">▦ <span>All Games</span></button>
+      </nav>
+      <div class="side-promo"><div class="crown">♛</div><b>Ready to play?</b><p>Find your next favorite game in the arena.</p><button class="btn btn-gold" data-go="browse">Explore games ↗</button></div>
+      <div class="sidebar-foot">© 2026 GAMEOARENA</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-brand">🎮 GAMEO<span>ARENA</span></button>
+        <label class="search">⌕ <input id="searchInput" placeholder="Search games, genres..." autocomplete="off"></label>
+        <div class="profile"><span class="online-dot"></span><div class="avatar">S</div><span>Creator</span></div>
+      </header>
+
+      <section id="homeView" class="view">
+        <div class="hero">
+          <div class="hero-copy"><div class="eyebrow">THE NEXT LEVEL STARTS HERE</div><h1>PLAY BIG.<br><span>CREATE MORE.</span></h1>
+            <p>Discover indie games, share what you build, and grow with the GAMEOARENA community.</p>
+            <div class="hero-actions"><button class="btn btn-primary" data-go="browse">Explore games <span>→</span></button></div>
+          </div>
+          <div class="hero-art"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="controller">🎮</div><div class="float-tag">✦ CREATE. PLAY. REPEAT.</div></div>
+          <div class="hero-glow"></div>
+        </div>
+        <div class="section-head"><div><div class="eyebrow">PICK YOUR NEXT OBSESSION</div><h2>Trending games <span class="purple">✦</span></h2></div><button class="text-btn" data-go="browse">View all →</button></div>
+        <div class="game-grid" id="homeGames"></div>
+        <div class="feature-strip">
+          <div><span>🎮</span><b>Free to play</b><small>Enjoy games at no cost</small></div>
+          <div><span>⚡</span><b>No sign-up</b><small>Jump straight into the fun</small></div>
+          <div><span>🛡️</span><b>Anti-cheat focus</b><small>Fair-play rules matter</small></div>
+          <div><span>🌐</span><b>Play instantly</b><small>No account needed</small></div>
+        </div>
+        <section class="fairplay-panel">
+          <div class="fairplay-icon">🛡️</div>
+          <div class="fairplay-copy">
+            <div class="eyebrow">FAIR PLAY MATTERS</div>
+            <h2>Play fair. Keep the arena fun.</h2>
+            <p>GAMEOARENA is designed with player safety and fair competition in mind. Suspicious scores and gameplay patterns can be reviewed as anti-cheat systems are added.</p>
+          </div>
+          <div class="fairplay-status"><span class="status-dot"></span><b>Fair Play</b><small>Player protection initiative</small></div>
+        </section>
+        <div class="creator-banner"><div><div class="eyebrow">WELCOME TO THE ARENA</div><h2>Your next favorite game is waiting.</h2><p>Discover new games and jump straight into the action.</p></div><button class="btn btn-gold" data-go="browse">Play now ↗</button></div>
+      </section>
+
+      <section id="browseView" class="view hidden">
+        <div class="page-heading"><div class="eyebrow">FIND YOUR NEXT FAVORITE</div><h1>Browse <span class="purple">games</span></h1><p>Fresh picks from the GAMEOARENA community.</p></div>
+        <div class="filters"><button class="chip selected" data-filter="All">All games</button><button class="chip" data-filter="Arcade">Arcade</button><button class="chip" data-filter="Puzzle">Puzzle</button><button class="chip" data-filter="Adventure">Adventure</button><button class="chip" data-filter="Racing">Racing</button></div>
+        <div class="game-grid" id="browseGames"></div>
+      </section>
+
+      <footer>GAMEOARENA <span>PLAY • DISCOVER • REPEAT</span><span>Community-powered gaming.</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <div class="modal hidden" id="gameModal"><div class="modal-panel"><div class="modal-top"><b id="modalTitle">Game</b><button id="closeModal">✕</button></div><div id="gameStage" class="game-stage"></div></div></div>
+  <script src="app.js"></script>
+</body></html>
